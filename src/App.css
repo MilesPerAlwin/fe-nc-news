@@ -40,3 +40,90 @@
 .read-the-docs {
   color: #888;
 }
+
+nav {
+  display: flex;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  gap: 16px;
+  max-width: fit-content;
+  background-color: rgb(219, 131, 131);
+}
+
+
+.browseArticlesContainer{
+
+  display:grid;
+  grid-template-columns: 34% 66%;
+  background-color: rgb(219, 131, 131);
+  padding: 15px;
+  margin: 10px;
+  
+  }
+  
+  .leftSide{
+  
+  grid-column-start: 1;
+  
+  }
+  
+  .rightSide{
+  
+    grid-column-start: 2;
+  
+  }
+  
+  
+  .ArticleContainer{
+  
+  
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    border-bottom: solid rgb(17, 90, 96);
+  
+  }
+
+  .articleImg{
+    max-width: 50%;
+    height: auto;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .articleBox{
+    background-color: antiquewhite;
+    border: solid 1px;
+    border-color:rgb(194, 91, 91);
+    margin: 10px;
+  }
+
+
+  .articleGrid1{
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+
+}
+
+  .articleGrid2{
+
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+
+}
+
+.bodyHeader{
+  width: 100%;
+}
+
+.header{
+  background-color: rgb(219, 131, 131);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
