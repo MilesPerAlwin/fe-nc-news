@@ -73,6 +73,11 @@ nav {
     grid-column-start: 2;
   
   }
+
+  .bothSides{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
   
   
   .ArticleContainer{
@@ -87,6 +92,17 @@ nav {
   .articleImg{
     max-width: 50%;
     height: auto;
+  }
+
+  .individualImg{
+    float:right;
+    margin: 2rem;
+    max-width: 25%;
+  }
+
+  .articleBody{
+    text-align: justify;
+    margin: 2rem;
   }
 
   li {
