@@ -1,19 +1,25 @@
 import { useState, useEffect } from "react";
-import { getArticles } from "../src/api";
+import { getArticles } from "../api";
 
 
 const ArticlesList = () => {
 
     const [articlesList, setArticlesList] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
-        getArticles().then((receivedArticles) => {
+        setIsLoading(true)
+        getArticles()
+        .then((receivedArticles) => {
             setArticlesList(receivedArticles);
+        })
+        .then(() => {
+            setIsLoading(false);
         })
     }, [])
 
 
-    return (
+    return isLoading ? (<h2>Loading articles...</h2>) : (
         <div>
             <section className="rightSide">
                 <ul>
