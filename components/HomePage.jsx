@@ -7,8 +7,10 @@ const HomePage = () => {
         <div>
             <h2>This is the Homepage</h2>
             <Navigation />
+            <div className="browseArticlesContainer">
             <SortByColumn />
             <ArticlesList />
+            </div>
         </div>
     )
 }
