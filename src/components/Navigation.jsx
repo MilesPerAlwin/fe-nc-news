@@ -1,13 +1,12 @@
 const Navigation = () => {
     return (
-        <div>
-            <h3>Nav bar of Topics:</h3>
+        <section className="navLinks">
             <nav>
                 <p>Coding Articles</p>
                 <p>Football Articles</p>
                 <p>Cooking Articles</p>
             </nav>
-        </div>
+        </section>
     )
 }
 

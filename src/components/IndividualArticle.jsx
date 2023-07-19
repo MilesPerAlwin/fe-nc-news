@@ -21,9 +21,9 @@ const IndividualArticle = () => {
     },[])
 
 
-    return isLoading ? (<h2>Loading article...</h2>) : (
-        <div className="browseArticlesContainer">
-            <main className="articleBox bothSides">
+    return isLoading ? (<h2 className="loadingArticle">Loading article...</h2>) : (
+        <main className="browseArticlesContainer">
+            <section className="articleBox bothSides">
             <div className="articleGrid1">
                 <p>Topic: {individualArticle.topic}</p>
                 <p>Posted by {individualArticle.author} on {individualArticle.created_at}</p>
@@ -36,13 +36,13 @@ const IndividualArticle = () => {
                 />
                 <p className="articleBody">{individualArticle.body}</p>
                 <p>{individualArticle.votes} votes (to add upvote/downvote button here</p>
-            </main>
+            </section>
             <section className="articleBox bothSides">
                 <h3>Comments ({individualArticle.comment_count})</h3>
                 <p>comments box here to post comment</p>
                 <p>list of existing comments</p>
             </section>
-        </div>
+        </main>
     )
 }
 

@@ -20,8 +20,7 @@ const ArticlesList = () => {
     }, [])
 
 
-    return isLoading ? (<h2>Loading articles...</h2>) : (
-        <div>
+    return isLoading ? (<h2 className="loadingArticleList">Loading articles...</h2>) : (
             <section className="rightSide">
                 <ul>
                     {articlesList.map((article) => {
@@ -31,7 +30,7 @@ const ArticlesList = () => {
                                 <p>Topic: {article.topic}</p>
                                 <p>Posted by {article.author}</p>
                                 </div>
-                                <h3><Link to={`/api/articles/${article.article_id}`}>{article.title}</Link></h3>
+                                <h2><Link to={`/api/articles/${article.article_id}`}>{article.title}</Link></h2>
                                 <img
                                     className="articleImg"
                                     src={article.article_img_url} 
@@ -47,7 +46,6 @@ const ArticlesList = () => {
                     })}
                 </ul>
             </section>
-        </div>
     )
 }
 

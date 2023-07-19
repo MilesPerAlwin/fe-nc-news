@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="mainBody">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
