@@ -25,3 +25,20 @@ export const getCommentsById = (article_id) => {
         return(res.data.comments);
     })
 }
+
+export const patchArticleVotes = (article_id, buttonClicked) => {
+
+    const patchRequestBody = { inc_votes: 0 }
+    
+    if (buttonClicked === "upvote") {
+        patchRequestBody.inc_votes++;
+    } else 
+    if (buttonClicked === "downvote") {
+        patchRequestBody.inc_votes--;
+    }
+    
+    return axios.patch(`https://nc-news-service.onrender.com/api/articles/${article_id}`, patchRequestBody)
+    .then((res) => {
+        return(res.data.article.votes);
+    })
+}
