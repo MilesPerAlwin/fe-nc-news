@@ -4,7 +4,6 @@ import { getCommentsById } from '../api';
 
 const CommentsList = () => {
     
-    // usestate for is Loading and commentsList
     const { article_id } = useParams();
     
     const [commentsSection, setCommentsSection] = useState([])
