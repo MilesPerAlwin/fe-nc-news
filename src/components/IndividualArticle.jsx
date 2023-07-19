@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { getArticleById } from '../api';
+import CommentsList from './CommentsList';
 
 const IndividualArticle = () => {
 
@@ -35,12 +36,12 @@ const IndividualArticle = () => {
                     alt={`${individualArticle.topic} photo`}
                 />
                 <p className="articleBody">{individualArticle.body}</p>
-                <p>{individualArticle.votes} votes (to add upvote/downvote button here</p>
+                <p>{individualArticle.votes} votes (to add upvote/downvote button here)</p>
             </section>
             <section className="articleBox bothSides">
                 <h3>Comments ({individualArticle.comment_count})</h3>
                 <p>comments box here to post comment</p>
-                <p>list of existing comments</p>
+                < CommentsList />
             </section>
         </main>
     )
