@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getArticles } from "../api";
+import { Link } from 'react-router-dom'
 
 
 const ArticlesList = () => {
@@ -19,8 +20,7 @@ const ArticlesList = () => {
     }, [])
 
 
-    return isLoading ? (<h2>Loading articles...</h2>) : (
-        <div>
+    return isLoading ? (<h2 className="loadingArticleList">Loading articles...</h2>) : (
             <section className="rightSide">
                 <ul>
                     {articlesList.map((article) => {
@@ -30,14 +30,14 @@ const ArticlesList = () => {
                                 <p>Topic: {article.topic}</p>
                                 <p>Posted by {article.author}</p>
                                 </div>
-                                <h3>{article.title}</h3>
+                                <h2><Link to={`/api/articles/${article.article_id}`}>{article.title}</Link></h2>
                                 <img
                                     className="articleImg"
                                     src={article.article_img_url} 
                                     alt={`${article.topic} photo`} 
                                 />
                                 <div className="articleGrid2">
-                                <p>{article.created_at.toLocaleString()}</p>
+                                <p>{article.created_at}</p>
                                 <p>{article.votes} votes</p>
                                 <p>{article.comment_count} comments</p>
                                 </div>
@@ -46,7 +46,6 @@ const ArticlesList = () => {
                     })}
                 </ul>
             </section>
-        </div>
     )
 }
 
