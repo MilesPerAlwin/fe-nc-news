@@ -18,3 +18,10 @@ export const getArticleById = (article_id) => {
         return(res.data.article);
     })
 }
+
+export const getCommentsById = (article_id) => {
+    return axios.get(`https://nc-news-service.onrender.com/api/articles/${article_id}/comments`)
+    .then((res) => {
+        return(res.data.comments);
+    })
+}
