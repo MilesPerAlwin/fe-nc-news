@@ -182,3 +182,26 @@ h1{
 .loadingArticle{
   color: rgb(4, 42, 43)
 }
+
+button{
+  background-color: #042A2B;
+}
+
+.errorMessage{
+  color: rgb(228, 29, 29);
+  background-color: #fcfcfc;
+  border: solid 1px;
+  width: 35%;
+  margin: 1rem;
+  margin-left: 13rem;
+  justify-content: center;
+  border-color: rgb(228, 29, 29);
+}
+
+.upvoteClicked{
+  background-color: #9ef44d;
+}
+
+.downvoteClicked{
+  background-color: rgb(228, 29, 29);
+}

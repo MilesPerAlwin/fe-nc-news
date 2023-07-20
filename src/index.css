@@ -45,12 +45,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #042A2B;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: rgb(241, 81, 86);
+  background-color: #54F2F2;
 }
 button:focus,
 button:focus-visible {
@@ -60,13 +60,15 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: rgb(47, 36, 58);
-    background-color: #ffffff;
+    background-color: #042A2B;
   }
   a:hover {
     color: rgb(244, 224, 77);
     text-decoration: underline;
   }
   button {
-    background-color: rgb(255, 207, 153);
+    background-color: #042A2B;
+    color: #54F2F2;
+    margin: 2px;
   }
 }
