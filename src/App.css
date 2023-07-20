@@ -198,10 +198,38 @@ button{
   border-color: rgb(228, 29, 29);
 }
 
+.errorMessagePostComment{
+  color: rgb(228, 29, 29);
+  background-color: #fcfcfc;
+  border: solid 1px;
+  width: 35%;
+  margin: 1em;
+  margin-left: 25em;
+  justify-content: center;
+  border-color: rgb(228, 29, 29);
+}
+
 .upvoteClicked{
   background-color: #9ef44d;
 }
 
 .downvoteClicked{
   background-color: rgb(228, 29, 29);
+}
+
+#new-comment{
+  width: 50rem;
+  height: 7rem;
+}
+
+#comment-button{
+  border: solid 2px;
+  border-color:rgb(4, 42, 43)
+}
+
+#comment-button:hover{
+  border-color: rgb(244, 224, 77);
+  border: solid 2px;
+  background-color: #042A2B;
+  color: rgb(244, 224, 77);
 }

@@ -41,7 +41,6 @@ const IndividualArticle = () => {
             </section>
             <section className="articleBox bothSides">
                 <h3>Comments ({individualArticle.comment_count})</h3>
-                <p>comments box here to post comment</p>
                 < CommentsList />
             </section>
         </main>
