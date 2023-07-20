@@ -209,6 +209,17 @@ button{
   border-color: rgb(228, 29, 29);
 }
 
+.waitPostComment{
+  color: #f4e04d;
+  background-color: #042a2b;
+  border: solid 1px;
+  width: 35%;
+  margin: 1em;
+  margin-left: 25em;
+  justify-content: center;
+  border-color: #f4e04d;
+}
+
 .upvoteClicked{
   background-color: #9ef44d;
 }
