@@ -11,7 +11,6 @@ import SignedInAs from './components/SignedInAs'
 function App() {
 
   return (
-    <>
       <div className="mainBody">
         <SignedInAs />
         <Header />
@@ -20,7 +19,6 @@ function App() {
           <Route path="/api/articles/:article_id" element={<IndividualArticle />} />
         </Routes>
       </div>
-    </>
   )
 }
 

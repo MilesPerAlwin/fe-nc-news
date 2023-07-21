@@ -46,7 +46,7 @@ const ArticleVoteButtons = (currentVotes) => {
     }
     
     return (
-        <div>
+        <div className="voteButtons">
             <p>{userVotes} votes</p>
             <button className={userVotes > votes ? "upvoteClicked" : null} aria-label="upvote this article" 
             onClick={() => {handleClick("upvote")}}

@@ -1,7 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 100vw;
+  margin: 0;
   text-align: center;
 }
 
@@ -43,11 +42,12 @@
 
 nav {
   display: flex;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  gap: 16px;
-  max-width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  justify-content: space-evenly;
   background-color: rgb(94, 177, 191);
   color:rgb(4, 42, 43);
   border-bottom: solid 5px;
@@ -56,32 +56,51 @@ nav {
 
 
 .browseArticlesContainer{
+  display:list-item;
+  padding: 1em;
+  margin: 1em;
+}
 
-  display:grid;
-  grid-template-columns: 20% 80%;
-  background-color: rgb(4, 42, 43);
-  padding: 15px;
-  margin: 10px;
-  
-  }
-  
-  .leftSide{
-  
-  grid-column-start: 1;
-  
-  }
-  
   .rightSide{
-  
-    grid-column-start: 2;
-  
+    width: 100%;
+    justify-content: center;
   }
 
-  .bothSides{
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
+
+@media only screen and (min-width: 600px) {
+  .browseArticlesContainer{
   
+    display:grid;
+    grid-template-columns: 20% 80%;
+    background-color: rgb(4, 42, 43);
+    padding: 1em;
+    margin: 1em;
+    
+    }
+    .leftSide{
+    
+    grid-column-start: 1;
+    
+    }
+    
+    .rightSide{
+    
+      grid-column-start: 2;
+    
+    }
+
+    .bothSides{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    
+  }
+
+  ul {
+    margin-block-start: 0rem;
+    padding-inline-start: 0rem;
+    margin-block-end: 0rem;
+  }
   
   .ArticleContainer{
   
@@ -89,6 +108,7 @@ nav {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     border-bottom: solid rgb(17, 90, 96);
+    font-size: .5rem;
   
   }
 
@@ -110,6 +130,7 @@ nav {
 
   li {
     list-style-type: none;
+    padding: 0rem;
   }
 
   .articleBox{
@@ -153,18 +174,28 @@ nav {
   padding-right: 3rem;
 }
 
-.bodyHeader{
-  width: 100%;
+.individualComment{
+  border-bottom: solid 1px;
+  border-color:rgb(4, 42, 43);
 }
 
-.header{
+.bodyHeader{
   background-color: rgb(94, 177, 191);
   display: flex;
   justify-content: center;
   width: 100%;
-  border-bottom: solid 10px;
+  height: 5em;
+  border-bottom: solid .5em;
   border-color: rgb(4, 42, 43)
 
+}
+
+.header{
+  height: 4rem;
+  margin: 1rem;
+  content: 1rem;
+  justify-content:center;
+  align-items: baseline;
 }
 
 h1{
@@ -220,6 +251,10 @@ button{
   border-color: #f4e04d;
 }
 
+.voteButtons{
+  margin: 1rem;
+}
+
 .upvoteClicked{
   background-color: #9ef44d;
 }
@@ -229,7 +264,7 @@ button{
 }
 
 #new-comment{
-  width: 50rem;
+  width: 15rem;
   height: 7rem;
 }
 

@@ -29,7 +29,7 @@ const CommentsList = () => {
             <ul className="commentBox">
                 {commentsSection.map((comment) => {
                     return (
-                        <li className="commentBox" key={comment.comment_id}>
+                        <li className="individualComment" key={comment.comment_id}>
                             <div className="articleGrid1">
                             <p>{comment.author}</p>
                             <p>{comment.created_at}</p>
