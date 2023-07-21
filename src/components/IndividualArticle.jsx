@@ -40,8 +40,7 @@ const IndividualArticle = () => {
                 <ArticleVoteButtons votes={individualArticle.votes}/>
             </section>
             <section className="articleBox bothSides">
-                <h3>Comments ({individualArticle.comment_count})</h3>
-                <p>comments box here to post comment</p>
+                <h3>Comments</h3>
                 < CommentsList />
             </section>
         </main>

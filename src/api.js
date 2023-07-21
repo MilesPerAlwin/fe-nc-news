@@ -42,3 +42,13 @@ export const patchArticleVotes = (article_id, buttonClicked) => {
         return(res.data.article.votes);
     })
 }
+
+export const PostComment = (comment, username, article_id) => {
+    
+    const postRequestBody = { "username": username, "body": comment }
+
+    return axios.post(`https://nc-news-service.onrender.com/api/articles/${article_id}/comments`, postRequestBody)
+    .then((res) => {
+        return(res.data.comment);
+    })
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { getCommentsById } from '../api';
+import PostAComment from './PostAComment';
 
 const CommentsList = () => {
     
@@ -24,6 +25,7 @@ const CommentsList = () => {
     
     return isLoading ? (<p>Loading comments...</p>) : (
         <section className="commentsSection">
+        < PostAComment setCommentsSection={setCommentsSection}/>
             <ul className="commentBox">
                 {commentsSection.map((comment) => {
                     return (
